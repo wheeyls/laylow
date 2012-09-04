@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="song">
+    <input id="slider" type="range" min="0" max="251" value="0" size="500px">
+    <div id="slider-value">0</div>
+    <div class="verse" data-start="1" data-end="10" data-collapse=true data-die=true>
+      <div class="line">Make sure your speakers are on...</div>
+    </div>
+    <div class="verse" data-start="14" data-end="44" data-collapse=true>
+      <div class="line">I probably should be</div>
+      <div class="line">Drug out to sea</div>
+      <div class="line">Where I can't hurt no one</div>
+      <div class="line">No one can hurt me</div>
+      <div class="line em" data-start="30" data-end="50">At least I'd be free</div>
+      <div class="line">And probably I'd see</div>
+      <div class="line">What caused me to be</div>
+      <div class="line">So detached completely.</div>
+    </div>
+    <div class="verse" data-start="46" data-end="86" data-collapse=true>
+      <div class="line">Jumping rope</div>
+      <div class="line">Through a thick cloud o smoke</div>
+      <div class="line">Fumbling through all</div>
+      <div class="line">Of the letters and the notes</div>
+      <div class="line em" data-start="64" data-end="89">The ones that you wrote</div>
+      <div class="line">Do they keep me afloat?</div>
+      <div class="line">Or just wrap round my neck</div>
+      <div class="line">like a noose on a rope?</div>
+      <div class="line em" data-start="81" data-end="89">Probably both.</div>
+    </div>
+    <div class="chorus" data-start="87" data-end="114" data-collapse=true>
+      <div class="line">So lay low baby</div>
+      <div class="line">I won't be back anytime soon</div>
+      <div class="line">If it gets too lonely</div>
+      <div class="line">I'll follow you around in this tune</div>
+    </div>
+    <div class="clear"></div>
+    <div class="verse" data-start="121" data-end="150" data-collapse=true>
+      <div class="line">I don't know what to do</div>
+      <div class="line em" data-start="127" data-end="160">Would I do if I knew?</div>
+      <div class="line">But we go through our day</div>
+      <div class="line">and get by and get through.</div>
+      <div class="line">But my heart is with you</div>
+      <div class="line em" data-start="143" data-end="160">You probably knew</div>
+      <div class="line">Your love is like glue</div>
+    </div>
+    <div class="chorus" data-start="153" data-end="179" data-collapse=true>
+      <div class="line">So lay low baby</div>
+      <div class="line">I won't be back anytime soon</div>
+      <div class="line">If it gets too lonely</div>
+      <div class="line">I'll follow you around in this tune</div>
+    </div>
+    <div class="finale" data-start="212" data-end="238" data-collapse=true>
+      <div class="line">So lay low baby</div>
+      <div class="line em" data-start="223" data-end="240">Just for a little while more</div>
+      <div class="line">If you can't keep waiting</div>
+      <div class="line">I will find my way back to your door</div>
+    </div>
+    <div data-color-fade="#692b2b" data-target="body" data-prop="background-color" data-color-start="179"></div>
+    <div data-show-all="245"></div>
+  </div>
+  <audio id='track'>
+    <source src='/laylow.mp3' type='audio/mpeg'></source>
+    <source src='/laylow.ogg' type='audio/ogg'></source>
+  </audio>
+  <script src="js/script.js"></script>
+</body>
+</html>

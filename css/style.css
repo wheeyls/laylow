@@ -1,0 +1,67 @@
+body {
+  font-family: "Ayuthaya", "Charcoal CY", Monaco, sans-serif;
+  background-color: #1a0a0a;
+  color: #bd9d9d;
+
+  -webkit-transition: background-color 33s ease-out;
+     -moz-transition: background-color 33s ease-out;
+       -o-transition: background-color 33s ease-out;
+          transition: background-color 33s ease-out;
+}
+
+.clear {
+  clear: both;
+  float: none;
+}
+
+.die {
+  display: none !important;
+}
+
+[data-start] {
+  opacity: 0;
+
+  -webkit-transition: all 1s ease-out;
+     -moz-transition: all 1s ease-out;
+       -o-transition: all 1s ease-out;
+          transition: all 1s ease-out;
+}
+
+#slider {
+  width: 500px;
+}
+
+.song {
+  /*-moz-column-gap: 4em;
+  -moz-column-width: 30ex;
+  -webkit-column-gap: 4em;
+  -webkit-column-width: 30ex;
+  column-gap: 4em;
+  column-width: 30ex;*/
+}
+
+.verse {
+  margin: 15px;
+}
+
+.chorus {
+  margin: 15px;
+}
+
+.finale {
+  margin: 15px;
+}
+
+.line {
+  font-size: 2.1em;
+}
+
+.em {
+  font-size: 2.7em;
+}
+
+.chorus .line {
+}
+
+.verse .line {
+}
