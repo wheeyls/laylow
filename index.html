@@ -7,11 +7,10 @@
 </head>
 <body>
   <div class="song">
-    <input id="slider" type="range" min="0" max="251" value="0" size="500px">
-    <div id="slider-value">0</div>
-    <div class="verse" data-start="1" data-end="10" data-collapse=true data-die=true>
-      <div class="line">Make sure your speakers are on...</div>
-    </div>
+    <audio id='track' controls>
+      <source src='laylow.mp3' type='audio/mpeg'></source>
+      <source src='laylow.ogg' type='audio/ogg'></source>
+    </audio>
     <div class="verse" data-start="14" data-end="44" data-collapse=true>
       <div class="line">I probably should be</div>
       <div class="line">Drug out to sea</div>
@@ -29,7 +28,7 @@
       <div class="line">Of the letters and the notes</div>
       <div class="line em" data-start="64" data-end="89">The ones that you wrote</div>
       <div class="line">Do they keep me afloat?</div>
-      <div class="line">Or just wrap round my neck</div>
+      <div class="line">Or just wrap round my throat</div>
       <div class="line">like a noose on a rope?</div>
       <div class="line em" data-start="81" data-end="89">Probably both.</div>
     </div>
@@ -64,10 +63,6 @@
     <div data-color-fade="#692b2b" data-target="body" data-prop="background-color" data-color-start="179"></div>
     <div data-show-all="245"></div>
   </div>
-  <audio id='track'>
-    <source src='/laylow.mp3' type='audio/mpeg'></source>
-    <source src='/laylow.ogg' type='audio/ogg'></source>
-  </audio>
   <script src="js/script.js"></script>
 </body>
 </html>

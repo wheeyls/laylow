@@ -12,6 +12,7 @@
     document.getElementById("slider-value").innerHTML = Math.floor(tick);
   }, false);
 
+  /*
   document.getElementById("slider").addEventListener("change", function (e) {
     var count = parseInt(e.target.value, 10)
       ;
@@ -19,6 +20,7 @@
     track.play();
     document.getElementById("slider-value").innerHTML = count;
   });
+  */
 
   function extractValue(str) {
     var res = parseFloat(str, 10);
