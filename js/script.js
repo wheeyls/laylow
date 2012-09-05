@@ -7,12 +7,12 @@
 
   track.play();
 
+  /*
   track.addEventListener('timeupdate', function (e) {
     var tick = e.target.currentTime;
     document.getElementById("slider-value").innerHTML = Math.floor(tick);
   }, false);
 
-  /*
   document.getElementById("slider").addEventListener("change", function (e) {
     var count = parseInt(e.target.value, 10)
       ;
@@ -78,6 +78,7 @@
 
     nodes = document.querySelectorAll('[data-start]');
 
+    show(track, true);
     for (i = 0, ii = nodes.length; i < ii; i++) {
       show(nodes[i], true);
     }
@@ -118,4 +119,7 @@
   bindor('data-start', renderItem);
   bindor('data-color-fade', fadeColor);
   track.addEventListener('ended', showAll, false);
+  track.addEventListener('play', function () {
+    hide(track, true);
+  }, false);
 }(this, this.document));
