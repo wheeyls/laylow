@@ -116,8 +116,73 @@
     }
   }
 
+  function tween(start, end, fn) {
+    var duration = end - start
+      ;
+
+    fn = fn || function (v) { return v; };
+
+    return function (continuation, now) {
+      var relativeNow = now - start
+        , normalNow
+        , res
+        ;
+
+      normalNow = duration === 0 ? -1 : relativeNow / duration;
+
+      if (normalNow < 0) {
+        res = 0;
+      } else if (normalNow > 1) {
+        res = 1;
+      } else {
+        res = fn(normalNow);
+      }
+
+      continuation(res);
+    };
+  }
+
+  function sprintf(text) {
+    var i = 1
+      , args = arguments
+      ;
+
+    return text.replace(/%s/g, function (pattern) {
+      return (i < args.length) ? args[i++] : "";
+    });
+  }
+
+
+  function calcHsl(val) {
+    var h, s, l;
+
+    h = 360 - ((360 - 240) * val);
+    s = 42 - ((42 - 20) * val);
+    l = 28 - ((28 - 25) * val);
+
+    return sprintf("hsl(%s, %s%, %s%)", h, s, l);
+  }
+
+  function updateBg() {
+    var intermission = tween(179, 209);
+
+    return function (e) {
+      var t = e.target.currentTime;
+      intermission(function (val) {
+        document.body.style.background = calcHsl(val);
+
+        if (val === 0) {
+          document.body.style.color = '#bd9d9d';
+        } else if (val === 1) {
+          document.body.style.color = '#cbdad5';
+        }
+      }, t);
+    };
+  }
+
+  track.addEventListener('timeupdate', updateBg(), false);
+
   bindor('data-start', renderItem);
-  bindor('data-color-fade', fadeColor);
   track.addEventListener('ended', showAll, false);
   track.addEventListener('play', function () {
     hide(track, true);

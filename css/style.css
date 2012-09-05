@@ -3,10 +3,10 @@ body {
   background-color: #692b2b;
   color: #bd9d9d;
 
-  -webkit-transition: background-color 33s ease-out;
-     -moz-transition: background-color 33s ease-out;
-       -o-transition: background-color 33s ease-out;
-          transition: background-color 33s ease-out;
+  -webkit-transition: background-color .3s ease-out;
+     -moz-transition: background-color .3s ease-out;
+       -o-transition: background-color .3s ease-out;
+          transition: background-color .3s ease-out;
 }
 
 .clear {
@@ -57,11 +57,11 @@ body {
 }
 
 .line {
-  font-size: 2.1em;
+  font-size: 3.1em;
 }
 
 .em {
-  font-size: 2.7em;
+  font-size: 3.7em;
 }
 
 @media (max-width: 500px) {
